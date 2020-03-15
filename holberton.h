@@ -6,17 +6,17 @@
 #include <unistd.h>
 
 /**
- * struct formatos - Struct of the different formats of printf
+ * struct formats - Struct of the different formats of printf
  *
  * @ptr: The operator
  * @f: The function associated
  */
+
 typedef struct formats
 {
 	char *ptr;
 	int (*f)(va_list);
-
-}fmt;
+} fmt;
 
 int _putchar(char c);
 int _printf(const char *format, ...);
