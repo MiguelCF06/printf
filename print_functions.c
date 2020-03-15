@@ -4,7 +4,7 @@
 /**
  * print_char - Print characters
  * @c: type data
- * Return always 1
+ * Return: always 1
  */
 int print_char(va_list c)
 {
