@@ -3,7 +3,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdarg.h>
-
+/**
+ * look_forpercent - Look for the correct percent for print
+ * @format: the recieve format
+ * Return: The correct percent to the function
+ */
 int (*look_forpercent(const char *format))(va_list)
 {
 	unsigned int x;
@@ -11,8 +15,10 @@ int (*look_forpercent(const char *format))(va_list)
 	fmt percent[] = {
 		{"c", print_char},
 		{"s", print_str},
-		/*{"i", pirnt_int},
-		{"d", print_dec},*/
+		/*
+		 *  {"i", pirnt_int},
+		 * {"d", print_dec},
+		 */
 		{NULL, NULL}
 	};
 
@@ -28,6 +34,7 @@ int (*look_forpercent(const char *format))(va_list)
 /**
  * _printf - The principal function printf
  * @format: the recieve format
+ * Return: Count of chars printed
  */
 int _printf(const char *format, ...)
 {
@@ -37,9 +44,7 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 		return (-1);
-
 	va_start(list, format);
-
 	while (format[countfr])
 	{
 		for (; format[countfr] != '%' && format[countfr]; countfr++)
@@ -49,22 +54,17 @@ int _printf(const char *format, ...)
 		}
 		if (!format[countfr])
 			return (count);
-
 		f = look_forpercent(&format[countfr + 1]);
-
-		if(f != NULL)
+		if (f != NULL)
 		{
 			count += f(list);
 			countfr += 2;
 			continue;
 		}
-
 		if (!format[countfr + 1])
 			return (-1);
-
 		_putchar(format[countfr]);
 		count++;
-
 		if (format[countfr + 1] == '%')
 			countfr += 2;
 		else
