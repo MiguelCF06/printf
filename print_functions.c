@@ -32,3 +32,93 @@ int print_str(va_list s)
 	}
 	return (x);
 }
+/**
+ * print_int - prints an integer
+ * @i: the integer to print
+ * Return: number of digits printed
+ */
+int print_int(va_list i)
+{
+	int countdig = 0;
+	int x[10];
+	int count1, rang, n, sum;
+
+	n = va_arg(i, int);
+
+	rang = 1000000000;
+	x[0] = n / rang;
+
+	for (count1 = 1; count1 < 10; count1++)
+	{
+		rang = rang / 10;
+		x[count1] = (n / rang) % 10;
+	}
+	if (n < 0)
+	{
+		_putchar('-');
+		countdig++;
+
+		for (count1 = 0; count1 <= 9; count1++)
+		{
+			x[count1] = x[count1] * -1;
+		}
+
+	}
+	for (count1 = 0, sum = 0; count1 < 10; count1++)
+	{
+		sum = sum + x[count1];
+
+		if (sum != 0 || count1 == 9)
+		{
+			_putchar(x[count1] + '0');
+			countdig++;
+		}
+	}
+	return (countdig);
+}
+/**
+ * print_dec - prints a decimal number
+ * @d: the decimal number to print
+ * Return: number of digits printed
+ */
+int print_dec(va_list d)
+{
+	int x[10];
+	int count1;
+	int countdig = 0;
+	int n, rang, sum;
+
+	rang = 1000000000;
+	n = va_arg(d, int);
+
+	x[0] = n / rang;
+
+	for (count1 = 1; count1 < 10; count1++)
+	{
+		rang = rang / 10;
+		x[count1] = (n / rang) % 10;
+	}
+	if (n < 0)
+	{
+		_putchar('-');
+		countdig++;
+		for (count1 = 0; count1 <= 9; count1++)
+		{
+			x[count1] = x[count1] * -1;
+		}
+	}
+	for (count1 = 0, sum = 0; count1 < 10; count1++)
+	{
+		sum = sum + x[count1];
+
+		if (sum != 0 || sum == 9)
+		{
+			_putchar(x[count1] + '0');
+			countdig++;
+		}
+
+	}
+	return (countdig);
+}
+
+
