@@ -19,6 +19,7 @@ int (*look_forpercent(const char *format))(va_list)
 		{"d", print_dec},
 		{"r", print_revstr},
 		{"S", print_strnonprint},
+		{"R", print_rot13},
 		{NULL, NULL}
 	};
 
