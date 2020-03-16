@@ -15,10 +15,10 @@ int (*look_forpercent(const char *format))(va_list)
 	fmt percent[] = {
 		{"c", print_char},
 		{"s", print_str},
-		/*
-		 *  {"i", pirnt_int},
-		 * {"d", print_dec},
-		 */
+		{"i", print_int},
+		{"d", print_dec},
+		{"r", print_revstr},
+		{"S", print_strnonprint},
 		{NULL, NULL}
 	};
 
