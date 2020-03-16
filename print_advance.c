@@ -81,3 +81,41 @@ int print_strnonprint(va_list S)
 	}
 	return (count);
 }
+/**
+ * print_rot13 - Print a string in rot13 conversion
+ * @R: The format for String
+ * Return: The number of chars printed
+ */
+int print_rot13(va_list R)
+{
+	int countch;
+	int cstr;
+	char *str;
+	int clet;
+	char letter[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char rot13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+	str = va_arg(R, char *);
+
+	if (str == NULL)
+		str = "(ahyy)";
+
+	for (cstr = 0; str[cstr]; cstr++)
+	{
+		for (clet = 0; letter[clet]; clet++)
+		{
+			if (str[cstr] == letter[clet])
+			{
+				_putchar(rot13[clet]);
+				countch++;
+				break;
+			}
+		}
+		if (!letter[clet])
+		{
+			_putchar(str[cstr]);
+			countch++;
+		}
+	}
+	return (countch);
+}
