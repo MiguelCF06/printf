@@ -111,7 +111,7 @@ int print_dec(va_list d)
 	{
 		sum += x[count1];
 
-		if (sum != 0 || sum == 9)
+		if (sum != 0 || count1 == 9)
 		{
 			_putchar(x[count1] + '0');
 			countdig++;
