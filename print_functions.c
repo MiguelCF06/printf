@@ -58,15 +58,15 @@ int print_int(va_list i)
 		_putchar('-');
 		countdig++;
 
-		for (count1 = 0; count1 <= 9; count1++)
+		for (count1 = 0; count1 < 10; count1++)
 		{
-			x[count1] = x[count1] * -1;
+			x[count1] *= -1;
 		}
 
 	}
 	for (count1 = 0, sum = 0; count1 < 10; count1++)
 	{
-		sum = sum + x[count1];
+		sum += x[count1];
 
 		if (sum != 0 || count1 == 9)
 		{
@@ -95,21 +95,21 @@ int print_dec(va_list d)
 
 	for (count1 = 1; count1 < 10; count1++)
 	{
-		rang = rang / 10;
+		rang /= 10;
 		x[count1] = (n / rang) % 10;
 	}
 	if (n < 0)
 	{
 		_putchar('-');
 		countdig++;
-		for (count1 = 0; count1 <= 9; count1++)
+		for (count1 = 0; count1 < 10; count1++)
 		{
-			x[count1] = x[count1] * -1;
+			x[count1] *= -1;
 		}
 	}
 	for (count1 = 0, sum = 0; count1 < 10; count1++)
 	{
-		sum = sum + x[count1];
+		sum += x[count1];
 
 		if (sum != 0 || sum == 9)
 		{
