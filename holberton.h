@@ -27,4 +27,5 @@ int print_dec(va_list d);
 int print_revstr(va_list r);
 int print_strnonprint(va_list S);
 int print_rot13(va_list R);
+int print_binary(va_list b);
 #endif

@@ -1,9 +1,37 @@
 #include "holberton.h"
+
+/**
+  * print_binary - Print integers converted to binary
+  * @b: The integer to convert
+  * Return: The numbers of chars printed
+  */
+
+int print_binary(va_list b)
+{
+	unsigned int arr[100], argum = va_arg(b, unsigned int);
+	int argcount = 0, count;
+
+	if (argum == 0)
+		_putchar('0');
+	else
+	{
+	for (count = 0; argum > 0; count++)
+	{
+		arr[count] = argum % 2;
+		argum /= 2;
+	}
+	for (count -= 1; count >= 0; count--, argcount++)
+	_putchar(arr[count] + '0');
+	}
+	return (argcount);
+}
+
 /**
  * print_revstr - Print a string in reverse
  * @r: The format reverse
  * Return: The number of chars printed
  */
+
 int print_revstr(va_list r)
 {
 	char *str;
