@@ -30,4 +30,5 @@ int print_rot13(va_list R);
 int print_binary(va_list b);
 int print_sign_to_unsigned(va_list u);
 int print_octal(va_list o);
+int print_hexa_upper(va_list X);
 #endif
