@@ -52,6 +52,9 @@ This prints a unsigned decimal (integer) number
 .TP
 .B o
 This prints a decimal number converted into a octal number
+.TP
+.B X
+This print decimal numbers in base 16 in uppercase
 .SH BUGS
 No known bugs.
 .SH AUTHORS
