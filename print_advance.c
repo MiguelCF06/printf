@@ -1,6 +1,35 @@
 #include "holberton.h"
 
 /**
+  * print_hexa_lower - Print integers converted to octal
+  * @x: The integer to convert
+  * Return: The numbers of chars printed
+  */
+
+int print_hexa_upper(va_list X)
+{
+	char hex[100];
+	int argcount = 0, count;
+	long int argum = va_arg(X, int), remainder;
+
+	for (count = 0; argum != 0; count++)
+	{
+		remainder = argum % 16;
+		if (remainder < 10)
+			hex[count] = 48 + remainder;
+		else
+			hex[count] = 55 + remainder;
+		argum /= 16;
+	}
+	for (count -= 1; count >= 0; count--)
+	{
+		_putchar(hex[count]);
+		argcount++;
+	}
+	return (argcount);
+}
+
+/**
   * print_octal - Print integers converted to octal
   * @o: The integer to convert
   * Return: The numbers of chars printed
