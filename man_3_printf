@@ -46,6 +46,9 @@ This prints a nonprintable character like \n or another like this form \x. The o
 .TP
 .B b
 This prints a integer number converted into a binary number
+.TP
+.B u
+This prints a unsigned decimal (integer) number
 .SH BUGS
 No known bugs.
 .SH AUTHORS
