@@ -97,10 +97,14 @@ int print_hexa_upper(va_list X)
 
 int print_octal(va_list o)
 {
-	unsigned int arr[100], argum = va_arg(o, unsigned int);
+	int arr[100], argum = va_arg(o, unsigned int);
 	int argcount = 0, count;
 
-
+	if (argum < 0)
+	{
+		_putchar('-');
+		argum *= -1;
+	}
 	if (argum < 8)
 	{
 		_putchar(argum + '0');
