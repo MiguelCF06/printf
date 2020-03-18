@@ -12,7 +12,10 @@ int print_binary(va_list b)
 	int argcount = 0, count;
 
 	if (argum == 0)
+	{
 		_putchar('0');
+		argcount++;
+	}
 	else
 	{
 	for (count = 0; argum > 0; count++)
