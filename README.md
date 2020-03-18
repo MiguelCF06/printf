@@ -19,9 +19,10 @@ This is our own function printf in C that is part of the Holberton framework and
 + Write function that produces output with conversion specifiers ```c```,```s```, and ```%```.
 + Conversion of specifiers ```i``` and ```d```.
 + Man page for the created function.
++ Conversion of specifier ```b``` prints a decimal number coverted to binary. 
 + Conversion of specifier ```S``` prints a string but with a condition.
 + Conversion of specifier ```r``` prints in reverse a string.
-+ Conversion of specifier ```R``` prints a string in rot13
++ Conversion of specifier ```R``` prints a string in rot13.
 ## Files in the repo
 * **_printf.c**: This contains the prototype and makes the different convertions that are in the other files.
 * **_putchar.c**: This file contain the syscall write and print a character to the standar output.
