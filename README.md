@@ -23,6 +23,7 @@ This is our own function printf in C that is part of the Holberton framework and
 + Conversion of specifier ```S``` prints a string but with a condition.
 + Conversion of specifier ```r``` prints in reverse a string.
 + Conversion of specifier ```R``` prints a string in rot13.
++ Conversion os specifier ```u``` prints a unsigned int.
 ## Files in the repo
 * **_printf.c**: This contains the prototype and makes the different convertions that are in the other files.
 * **_putchar.c**: This file contain the syscall write and print a character to the standar output.
