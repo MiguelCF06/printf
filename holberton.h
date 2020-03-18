@@ -28,4 +28,6 @@ int print_revstr(va_list r);
 int print_strnonprint(va_list S);
 int print_rot13(va_list R);
 int print_binary(va_list b);
+int print_sign_to_unsigned(va_list u);
+int print_octal(va_list o);
 #endif
