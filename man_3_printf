@@ -49,6 +49,9 @@ This prints a integer number converted into a binary number
 .TP
 .B u
 This prints a unsigned decimal (integer) number
+.TP
+.B o
+This prints a decimal number converted into a octal number
 .SH BUGS
 No known bugs.
 .SH AUTHORS
