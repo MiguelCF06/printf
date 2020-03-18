@@ -1,6 +1,6 @@
 ## _printf
 This is our own function printf in C that is part of the Holberton framework and first big project for the cohort 11.
-w*  **Prototype:**  ```int _printf(const char *, ...);```
+*  **Prototype:**  ```int _printf(const char *, ...);```
 ## Requirementes and authorized functions:
 
 * All files will be compiled on Ubuntu 14.04 LTS
