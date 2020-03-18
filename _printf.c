@@ -23,6 +23,7 @@ int (*look_forpercent(const char *format))(va_list)
 		{"b", print_binary},
 		{"u", print_sign_to_unsigned},
 		{"o", print_octal},
+		{"X", print_hexa_upper},
 		{NULL, NULL}
 	};
 
