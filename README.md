@@ -4,23 +4,23 @@ This is our own function printf in C that is part of the Holberton framework and
 ## Examples
 **String**
 
-    ```Input: _printf("%s\n", 'This is a string.');```
-    ```Output: This is a string.```
+    ```Input: _printf("%s\n", 'This is a string.');
+    Output: This is a string.```
 
 **Character**
 
-    ```Input: _printf("The first letter in the alphabet is %c\n", 'A');```
-    ```Output: The first letter in the alphabet is A```
+    ```Input: _printf("The first letter in the alphabet is %c\n", 'A');
+    Output: The first letter in the alphabet is A```
 
 **Integer**
 
-    ```Input: _printf("There are %i\n", 12);```
-    ```Output: There are 12```
+    ```Input: _printf("There are %i\n", 12);
+    Output: There are 12```
 
 **Decimal**
 
-    ```Input: _printf("%d\n", 1000);```
-    ```Output: 1000```
+    ```Input: _printf("%d\n", 1000);
+    Output: 1000```
 
 ## Requirementes and authorized functions:
 
