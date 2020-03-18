@@ -1,6 +1,27 @@
 ## _printf
 This is our own function printf in C that is part of the Holberton framework and first big project for the cohort 11.
 *  **Prototype:**  ```int _printf(const char *, ...);```
+## Examples
+**String**
+
+    ```Input: _printf("%s\n", 'This is a string.');```
+    ```Output: This is a string.```
+
+**Character**
+
+    ```Input: _printf("The first letter in the alphabet is %c\n", 'A');```
+    ```Output: The first letter in the alphabet is A```
+
+**Integer**
+
+    ```Input: _printf("There are %i\n", 12);```
+    ```Output: There are 12```
+
+**Decimal**
+
+    ```Input: _printf("%d\n", 1000);```
+    ```Output: 1000```
+
 ## Requirementes and authorized functions:
 
 * All files will be compiled on Ubuntu 14.04 LTS
