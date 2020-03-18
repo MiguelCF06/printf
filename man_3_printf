@@ -43,6 +43,9 @@ This prints a string in Rot13 mode
 .TP
 .B S
 This prints a nonprintable character like \n or another like this form \x. The only printable characters in ascii are from 32 to 126.
+.TP
+.B b
+This prints a integer number converted into a binary number
 .SH BUGS
 No known bugs.
 .SH AUTHORS
