@@ -13,6 +13,13 @@ int print_hexa_lower(va_list x)
 	int argcount = 0, count;
 	long int argum = va_arg(x, int), remainder;
 
+	if (argum == 0)
+	{
+		_putchar('0');
+		argcount++;
+	}
+	else
+	{
 	for (count = 0; argum != 0; count++)
 	{
 		remainder = argum % 16;
@@ -28,6 +35,7 @@ int print_hexa_lower(va_list x)
 			hex[count] += 32;
 		_putchar(hex[count]);
 		argcount++;
+	}
 	}
 	return (argcount);
 }
@@ -46,6 +54,13 @@ int print_hexa_upper(va_list X)
 	int argcount = 0, count;
 	long int argum = va_arg(X, int), remainder;
 
+	if (argum == 0)
+	{
+		_putchar('0');
+		argcount++;
+	}
+	else
+	{
 	for (count = 0; argum != 0; count++)
 	{
 		remainder = argum % 16;
@@ -59,6 +74,7 @@ int print_hexa_upper(va_list X)
 	{
 		_putchar(hex[count]);
 		argcount++;
+	}
 	}
 	return (argcount);
 }
