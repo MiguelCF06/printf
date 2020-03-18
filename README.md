@@ -25,6 +25,7 @@ This is our own function printf in C that is part of the Holberton framework and
 + Conversion of specifier ```R``` prints a string in rot13.
 + Conversion of specifier ```u``` prints a unsigned int.
 + Conversion of specifier ```o``` prints an octal number.
++ Conversion of specifier ```X``` prints hexadecimal numbers in uppercase.
 ## Files in the repo
 * **_printf.c**: This contains the prototype and makes the different convertions that are in the other files.
 * **_putchar.c**: This file contain the syscall write and print a character to the standar output.
